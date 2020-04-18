@@ -67,7 +67,7 @@ nav a.menu {
 }
 
 .content {
-  height: 80vh;
+  height: 73.8vh;
   background-image: url("./components/hero-bg.png");
   background-size: cover;
   background-repeat: no-repeat;
@@ -88,6 +88,12 @@ nav a.menu {
 
 .inner-desc {
   margin: auto;
+  padding-top: 2rem;
+}
+
+.inner-desc .typed-text {
+  font-size: 3.3rem;
+  margin-bottom: 1rem;
 }
 
 .hero-desc h1 {
@@ -105,12 +111,12 @@ nav a.menu {
 }
 
 .text-js {
-  color: #f8c702;
+  color: #e84a2c;
 }
 
 .span-6 img {
   height: auto;
-  width: 55.3%;
+  width: 56.4%;
   margin-left: 13rem;
 }
 
@@ -135,14 +141,14 @@ nav a.menu {
 }
 
 .about-left h2 {
-  font-size: 1.7rem;
-  line-height: 2.5rem;
+  font-size: 1.5rem;
+  line-height: 2.4rem;
   margin-bottom: 1rem;
 }
 
 .about-left p {
-  line-height: 1.7rem;
-  font-size: 1.13rem;
+  line-height: 1.4rem;
+  font-size: 1rem;
 }
 
 .experience {
@@ -162,15 +168,19 @@ nav a.menu {
 }
 
 .about-right {
-  padding-left: 1rem;
+  padding-left: 2rem;
 }
 
 .about-right h1 {
-  font-size: 3rem;
-  margin-bottom: 0.7rem;
+  font-size: 2rem;
+  margin-bottom: 1rem;
 }
 
 .about-right h2 {
   color: var(--bgAccentDark);
-  margin-top: 2rem;
+  margin-top: 2.5rem;
+}
+
+.icon-email {
+  margin-bottom: -0.35rem;
 }

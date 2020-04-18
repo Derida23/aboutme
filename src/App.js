@@ -1,8 +1,67 @@
 import React from "react";
 import "./App.css";
-import { FiSearch, FiMenu } from "react-icons/fi";
+import { FiSearch, FiMenu, FiMail } from "react-icons/fi";
 
 function App() {
+  var TxtRotate = function (el, toRotate, period) {
+    this.toRotate = toRotate;
+    this.el = el;
+    this.loopNum = 0;
+    this.period = parseInt(period, 10) || 2000;
+    this.txt = "";
+    this.tick();
+    this.isDeleting = false;
+  };
+
+  TxtRotate.prototype.tick = function () {
+    let i = this.loopNum % this.toRotate.length;
+    let fullTxt = this.toRotate[i];
+
+    if (this.isDeleting) {
+      this.txt = fullTxt.substring(0, this.txt.length - 1);
+    } else {
+      this.txt = fullTxt.substring(0, this.txt.length + 1);
+    }
+
+    this.el.innerHTML = '<span class="wrap">' + this.txt + "</span>";
+
+    let that = this;
+    let delta = 300 - Math.random() * 100;
+
+    if (this.isDeleting) {
+      delta /= 2;
+    }
+
+    if (!this.isDeleting && this.txt === fullTxt) {
+      delta = this.period;
+      this.isDeleting = true;
+    } else if (this.isDeleting && this.txt === "") {
+      this.isDeleting = false;
+      this.loopNum++;
+      delta = 500;
+    }
+
+    setTimeout(function () {
+      that.tick();
+    }, delta);
+  };
+
+  window.onload = function () {
+    let elements = document.getElementsByClassName("txt-rotate");
+    for (let i = 0; i < elements.length; i++) {
+      let toRotate = elements[i].getAttribute("data-rotate");
+      let period = elements[i].getAttribute("data-period");
+      if (toRotate) {
+        new TxtRotate(elements[i], JSON.parse(toRotate), period);
+      }
+    }
+    // INJECT CSS
+    let css = document.createElement("style");
+    css.type = "text/css";
+    css.innerHTML =
+      ".txt-rotate > .wrap { border-right: 0.08em solid #E84A2C }";
+    document.body.appendChild(css);
+  };
   return (
     <>
       <div className="wrapper">
@@ -51,10 +110,17 @@ function App() {
             <div className="flexbox">
               <div className="span-6 hero-desc">
                 <div className="inner-desc">
-                  <h1>Arian Derida</h1>
-                  <h3>Am a Fulstack Developer and UI/UX Enthusiast </h3>
+                  {/* <h1>Arian Derida</h1> */}
+                  <h1 className="typed-text">
+                    <span
+                      className="txt-rotate"
+                      data-period="2000"
+                      data-rotate='[ "Arian Derida", "Fullstack Developer", "UI/UX Enthusiast" ]'
+                    ></span>
+                  </h1>
+                  <h3>Hi, I’m Arian Derida. Nice to meet you</h3>
                   <p>
-                    I have experience in building Website and Mobile
+                    Am a have experience in building Website and Mobile
                     Applications using <b className="text-js">Javascript</b>,
                     passionate in Python Data Science and UI/UX
                   </p>
@@ -75,15 +141,16 @@ function App() {
             <div className="span-6 about-left">
               <h2>
                 I love javascript, happy to explore programming languages, Start
-                with design and end with code
+                with design end with code;
               </h2>
               <p>
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s,
+                Starting to become a designer who likes UI/UX and began
+                processing into a Fullstack Developer by learning
+                <b className="text-js"> Javascript</b> and Python ​​for Data
+                Science
               </p>
               <div className="experience">
-                <span>7</span>{" "}
+                <span>2</span>{" "}
                 <span>
                   Years of <br /> Experience
                 </span>
@@ -94,7 +161,9 @@ function App() {
               <p>
                 <span>We should queue up a chat. I’ll buy the coffee</span>
               </p>
-              <h2>arianderida@gmail.com</h2>
+              <h2>
+                <FiMail className="icon-email" /> arianderida@gmail.com
+              </h2>
             </div>
           </div>
         </div>
