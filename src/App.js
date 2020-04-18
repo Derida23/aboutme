@@ -3,7 +3,7 @@ import "./App.css";
 import { FiSearch, FiMenu, FiMail } from "react-icons/fi";
 
 function App() {
-  var TxtRotate = function (el, toRotate, period) {
+  let TxtRotate = function (el, toRotate, period) {
     this.toRotate = toRotate;
     this.el = el;
     this.loopNum = 0;
@@ -69,7 +69,13 @@ function App() {
           <div className="container">
             <nav>
               <h3>
-                <span>A</span>
+                <span>
+                  <img
+                    className="hero-logo"
+                    src={require("./components/hero-logo.png")}
+                    alt=""
+                  />
+                </span>
               </h3>
               <ul>
                 <li>
@@ -127,7 +133,7 @@ function App() {
                 </div>
               </div>
               <div className="span-6 hero-img">
-                <img src={require("./components/PNG.png")} alt="" />
+                <img src={require("./components/hero-user.png")} alt="" />
               </div>
             </div>
           </div>

@@ -37,10 +37,15 @@ nav h3 {
 }
 
 nav h3 span {
+  display: flex;
   background: var(--bgAccent);
   color: #fff;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 0.8rem;
   border-radius: 8px;
+}
+
+.hero-logo {
+  width: 2rem;
 }
 
 nav ul {
