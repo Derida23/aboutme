@@ -202,8 +202,8 @@ function App() {
                 </span>
                 <h3>UI/UX Design</h3>
                 <p>
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has been the industry's
+                  I value simple content structures, clean design patterns, and
+                  thoughtful interactions. use adobe products
                 </p>
                 <a href="/#">More</a>
               </div>
@@ -217,8 +217,8 @@ function App() {
                 </span>
                 <h3>Web Applications</h3>
                 <p>
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has been the industry's
+                  I usually use react-hook with apollo graphql, redux, express,
+                  mongodb or mysql, github or gitlab
                 </p>
                 <a href="/#">More</a>
               </div>
@@ -232,8 +232,8 @@ function App() {
                 </span>
                 <h3>Mobile Applications</h3>
                 <p>
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has been the industry's
+                  I like implementing design in making mobile applications with
+                  react native, and now I am learning flutter
                 </p>
                 <a href="/#">More</a>
               </div>
