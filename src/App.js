@@ -1,6 +1,14 @@
 import React from "react";
 import "./App.css";
-import { FiSearch, FiMenu, FiMail } from "react-icons/fi";
+import {
+  FiSearch,
+  FiMenu,
+  FiMail,
+  // FiPenTool,
+  FiSmartphone,
+  FiCode,
+} from "react-icons/fi";
+import { TiBrush } from "react-icons/ti";
 
 function App() {
   let TxtRotate = function (el, toRotate, period) {
@@ -165,11 +173,70 @@ function App() {
             <div className="span-6 about-right">
               <h1>Interested in working together?</h1>
               <p>
-                <span>We should queue up a chat. I’ll buy the coffee</span>
+                <span>
+                  I am always open to discussing software development work or
+                  partnership opportunities. i will buy coffee;
+                </span>
               </p>
               <h2>
                 <FiMail className="icon-email" /> arianderida@gmail.com
               </h2>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="services">
+        <div className="container">
+          <div className="text-center">
+            <h5 className="small-header">Services</h5>
+            <h3 className="main-header">What we do</h3>
+          </div>
+
+          <div className="services-main">
+            <div className="single-services">
+              <div className="bg"></div>
+              <div className="services-inner">
+                <span>
+                  <TiBrush />
+                </span>
+                <h3>UI/UX Design</h3>
+                <p>
+                  Lorem Ipsum is simply dummy text of the printing and
+                  typesetting industry. Lorem Ipsum has been the industry's
+                </p>
+                <a href="/#">More</a>
+              </div>
+            </div>
+
+            <div className="single-services active">
+              <div className="bg"></div>
+              <div className="services-inner">
+                <span>
+                  <FiCode />
+                </span>
+                <h3>Web Applications</h3>
+                <p>
+                  Lorem Ipsum is simply dummy text of the printing and
+                  typesetting industry. Lorem Ipsum has been the industry's
+                </p>
+                <a href="/#">More</a>
+              </div>
+            </div>
+
+            <div className="single-services">
+              <div className="bg"></div>
+              <div className="services-inner">
+                <span>
+                  <FiSmartphone />
+                </span>
+                <h3>Mobile Applications</h3>
+                <p>
+                  Lorem Ipsum is simply dummy text of the printing and
+                  typesetting industry. Lorem Ipsum has been the industry's
+                </p>
+                <a href="/#">More</a>
+              </div>
             </div>
           </div>
         </div>

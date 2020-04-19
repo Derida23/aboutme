@@ -14,6 +14,17 @@
   font-family: HK Grotesk Regular, Serif;
 }
 
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #ddd;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #e84a2c;
+}
 .wrapper {
   background: var(--darkBg);
   color: white;
@@ -72,7 +83,7 @@ nav a.menu {
 }
 
 .content {
-  height: 73.8vh;
+  height: 74.8vh;
   background-image: url("./components/hero-bg.png");
   background-size: cover;
   background-repeat: no-repeat;
@@ -188,4 +199,82 @@ nav a.menu {
 
 .icon-email {
   margin-bottom: -0.35rem;
+}
+
+.small-header {
+  color: var(--bgAccentDark);
+  margin-bottom: 1.3rem;
+  font-size: 1.2rem;
+}
+
+.main-header {
+  font-size: 2.5rem;
+  line-height: 2.4rem;
+  margin-bottom: 3rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.services {
+  padding: 2.5rem 0;
+  background: var(--darkBg);
+  color: #fff;
+}
+
+.services-main {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.single-services {
+  text-align: center;
+  position: relative;
+}
+
+.single-services.active .services-inner {
+  background: var(--darkerBg);
+}
+
+.single-services.active .bg,
+.single-services:hover .bg {
+  position: absolute;
+  background-image: linear-gradient(50deg, #f54ea2, #e84a2c);
+  right: -2%;
+  bottom: -2%;
+  height: 90%;
+  width: 90%;
+  z-index: -0;
+}
+
+.single-services:hover .services-inner {
+  background: var(--darkerBg);
+}
+
+.services-inner {
+  padding: 2rem 1.5rem;
+  position: relative;
+  z-index: 5;
+}
+
+.single-services span {
+  font-size: 3rem;
+  color: var(--bgAccentDark);
+}
+
+.single-services h3 {
+  font-size: 1.4rem;
+  margin: 1rem 0;
+}
+
+.single-services p {
+  line-height: 1.5rem;
+  margin-bottom: 1.2rem;
+}
+
+.single-services a {
+  color: var(--bgAccent);
+  font-size: 1.1rem;
 }
