@@ -79,6 +79,7 @@ function App() {
               <h3>
                 <span>
                   <img
+                    draggable="false"
                     className="hero-logo"
                     src={require("./components/hero-logo.png")}
                     alt=""
@@ -141,7 +142,11 @@ function App() {
                 </div>
               </div>
               <div className="span-6 hero-img">
-                <img src={require("./components/hero-user.png")} alt="" />
+                <img
+                  draggable="false"
+                  src={require("./components/hero-user.png")}
+                  alt=""
+                />
               </div>
             </div>
           </div>
