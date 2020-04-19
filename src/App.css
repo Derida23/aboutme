@@ -283,3 +283,37 @@ nav a.menu {
   color: var(--bgAccent);
   font-size: 1.1rem;
 }
+
+.portfolio {
+  padding: 3rem 0;
+  background: var(--darkerBg);
+  color: #fff;
+}
+
+.gallery-box {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 230px);
+  gap: 1rem;
+}
+
+.gallery-item {
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.gallery-item div,
+.gallery-item a {
+  height: 100%;
+  width: 100%;
+}
+
+.gallery-item a {
+  display: block;
+  background: rgba(0, 0, 0, 0.5);
+  font-size: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}

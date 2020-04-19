@@ -4,11 +4,12 @@ import {
   FiSearch,
   FiMenu,
   FiMail,
-  // FiPenTool,
+  FiCamera,
   FiSmartphone,
   FiCode,
 } from "react-icons/fi";
 import { TiBrush } from "react-icons/ti";
+import ImageItem from "./dataImage";
 
 function App() {
   let TxtRotate = function (el, toRotate, period) {
@@ -70,6 +71,7 @@ function App() {
       ".txt-rotate > .wrap { border-right: 0.08em solid #E84A2C }";
     document.body.appendChild(css);
   };
+
   return (
     <>
       <div className="wrapper">
@@ -243,6 +245,34 @@ function App() {
                 <a href="/#">More</a>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="portfolio">
+        <div className="container">
+          <div className="text-center">
+            <h5 className="small-header">Portfolio</h5>
+            <h3 className="main-header">My Recent Project</h3>
+          </div>
+
+          <div className="gallery-box">
+            {ImageItem.map((item, index) => (
+              <div
+                className="gallery-item"
+                style={{
+                  backgroundImage: `url(${item.image})`,
+                }}
+              >
+                <div>
+                  <a href="/#">
+                    <span>
+                      <FiCamera />
+                    </span>
+                  </a>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
