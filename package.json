@@ -9,7 +9,9 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-icons": "^3.9.0",
-    "react-scripts": "3.4.1"
+    "react-scripts": "3.4.1",
+    "react-simple-image-viewer": "^0.0.4",
+    "react-slick": "^0.25.2"
   },
   "scripts": {
     "start": "react-scripts start",

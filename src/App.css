@@ -249,8 +249,8 @@ nav a.menu {
   background-image: linear-gradient(50deg, #f54ea2, #e84a2c);
   right: -2%;
   bottom: -2%;
-  height: 90%;
-  width: 90%;
+  height: 95%;
+  width: 95%;
   z-index: -0;
 }
 
@@ -261,7 +261,7 @@ nav a.menu {
 .services-inner {
   padding: 2rem 1.5rem;
   position: relative;
-  z-index: 5;
+  /* z-index: 5; */
 }
 
 .single-services span {
@@ -285,15 +285,15 @@ nav a.menu {
 }
 
 .portfolio {
-  padding: 3rem 0;
+  padding: 3rem 1rem;
   background: var(--darkerBg);
   color: #fff;
 }
 
 .gallery-box {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(2, 230px);
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(2, 210px);
   gap: 1rem;
 }
 
@@ -303,12 +303,13 @@ nav a.menu {
 }
 
 .gallery-item div,
-.gallery-item a {
+.gallery-item label {
   height: 100%;
   width: 100%;
 }
 
-.gallery-item a {
+.gallery-item label {
+  cursor: pointer;
   display: block;
   background: rgba(0, 0, 0, 0.5);
   font-size: 2.5rem;
@@ -316,4 +317,8 @@ nav a.menu {
   align-items: center;
   justify-content: center;
   color: #fff;
+}
+
+.image-viewer {
+  z-index: 99;
 }

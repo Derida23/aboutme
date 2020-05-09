@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useCallback } from "react";
 import "./App.css";
 import {
   FiSearch,
@@ -10,8 +10,22 @@ import {
 } from "react-icons/fi";
 import { TiBrush } from "react-icons/ti";
 import ImageItem from "./dataImage";
+import ImageViewer from "react-simple-image-viewer";
 
 function App() {
+  const [currentImage, setCurrentImage] = useState(0);
+  const [isViewerOpen, setIsViewerOpen] = useState(false);
+
+  const openImageViewer = useCallback((index) => {
+    setCurrentImage(index);
+    setIsViewerOpen(true);
+  }, []);
+
+  const closeImageViewer = () => {
+    setCurrentImage(0);
+    setIsViewerOpen(false);
+  };
+
   let TxtRotate = function (el, toRotate, period) {
     this.toRotate = toRotate;
     this.el = el;
@@ -73,7 +87,7 @@ function App() {
   };
 
   return (
-    <>
+    <div>
       <div className="wrapper">
         <header>
           <div className="container">
@@ -250,33 +264,67 @@ function App() {
       </section>
 
       <section className="portfolio">
+        <div className="text-center">
+          <h5 className="small-header">Portfolio</h5>
+          <h3 className="main-header">My Recent Project</h3>
+        </div>
+
+        <div className="gallery-box">
+          {ImageItem.map((item, index) => (
+            <div
+              className="gallery-item"
+              onClick={() => openImageViewer(index)}
+              style={{
+                backgroundImage: `url(${item.image})`,
+              }}
+            >
+              <div>
+                <label href="/#">
+                  <span>
+                    <FiCamera size="0.7em" />
+                  </span>
+                </label>
+              </div>
+            </div>
+          ))}
+
+          {isViewerOpen && (
+            <ImageViewer
+              className="image-viewer"
+              src={ImageItem.map((item, index) => item.image)}
+              currentIndex={currentImage}
+              onClose={closeImageViewer}
+              backgroundStyle={{
+                background: "rgba(0, 0, 0, 0.88)",
+                paddingTop: "1rem",
+                paddingBottom: "1rem",
+              }}
+            />
+          )}
+        </div>
+      </section>
+
+      <section className="testimonials">
         <div className="container">
           <div className="text-center">
-            <h5 className="small-header">Portfolio</h5>
-            <h3 className="main-header">My Recent Project</h3>
+            <h5 className="small-header">Testimonial</h5>
+            <h3 className="main-header">What People Say</h3>
           </div>
-
-          <div className="gallery-box">
-            {ImageItem.map((item, index) => (
-              <div
-                className="gallery-item"
-                style={{
-                  backgroundImage: `url(${item.image})`,
-                }}
-              >
-                <div>
-                  <a href="/#">
-                    <span>
-                      <FiCamera />
-                    </span>
-                  </a>
-                </div>
-              </div>
-            ))}
+          <div className="slider-container">
+            <div>
+              <h2>
+                <span></span>
+              </h2>
+              <h3>
+                We wanted to redesign our website to be trendy and who better to
+                bring in and he did not disappoint. I love his work
+              </h3>
+            </div>
+            <div className="slider-image"></div>
           </div>
         </div>
       </section>
-    </>
+    </div>
   );
 }
 
