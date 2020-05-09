@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@brainhubeu/react-carousel": "^1.13.46",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
@@ -10,8 +11,7 @@
     "react-dom": "^16.13.1",
     "react-icons": "^3.9.0",
     "react-scripts": "3.4.1",
-    "react-simple-image-viewer": "^0.0.4",
-    "react-slick": "^0.25.2"
+    "react-simple-image-viewer": "^0.0.4"
   },
   "scripts": {
     "start": "react-scripts start",

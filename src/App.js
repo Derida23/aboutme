@@ -7,10 +7,17 @@ import {
   FiCamera,
   FiSmartphone,
   FiCode,
+  FiMessageCircle,
+  FiArrowLeftCircle,
+  FiArrowLeft,
+  FiArrowRightCircle,
+  FiArrowRight,
 } from "react-icons/fi";
 import { TiBrush } from "react-icons/ti";
-import ImageItem from "./dataImage";
+import { ImagePortfolio, ImageTestimoni } from "./dataImage";
 import ImageViewer from "react-simple-image-viewer";
+import Carousel from "@brainhubeu/react-carousel";
+import "@brainhubeu/react-carousel/lib/style.css";
 
 function App() {
   const [currentImage, setCurrentImage] = useState(0);
@@ -176,7 +183,7 @@ function App() {
             <div className="span-6 about-left">
               <h2>
                 I love javascript, happy to explore programming languages, Start
-                with design end with code;
+                with design end with code
               </h2>
               <p>
                 Starting to become a designer who likes UI/UX and began
@@ -185,7 +192,7 @@ function App() {
                 Science
               </p>
               <div className="experience">
-                <span>2</span>{" "}
+                <span>3</span>{" "}
                 <span>
                   Years of <br /> Experience
                 </span>
@@ -196,7 +203,7 @@ function App() {
               <p>
                 <span>
                   I am always open to discussing software development work or
-                  partnership opportunities. i will buy coffee;
+                  partnership opportunities. and i will buy coffee for you
                 </span>
               </p>
               <h2>
@@ -270,7 +277,7 @@ function App() {
         </div>
 
         <div className="gallery-box">
-          {ImageItem.map((item, index) => (
+          {ImagePortfolio.map((item, index) => (
             <div
               className="gallery-item"
               onClick={() => openImageViewer(index)}
@@ -291,11 +298,11 @@ function App() {
           {isViewerOpen && (
             <ImageViewer
               className="image-viewer"
-              src={ImageItem.map((item, index) => item.image)}
+              src={ImagePortfolio.map((item, index) => item.image)}
               currentIndex={currentImage}
               onClose={closeImageViewer}
               backgroundStyle={{
-                background: "rgba(0, 0, 0, 0.88)",
+                background: "rgb(31,31,31, 0.9)",
                 paddingTop: "1rem",
                 paddingBottom: "1rem",
               }}
@@ -310,17 +317,83 @@ function App() {
             <h5 className="small-header">Testimonial</h5>
             <h3 className="main-header">What People Say</h3>
           </div>
-          <div className="slider-container">
-            <div>
-              <h2>
-                <span></span>
-              </h2>
-              <h3>
-                We wanted to redesign our website to be trendy and who better to
-                bring in and he did not disappoint. I love his work
-              </h3>
-            </div>
-            <div className="slider-image"></div>
+          <div style={{ width: "74%", margin: "auto" }}>
+            <Carousel
+              arrowLeft={
+                <FiArrowLeftCircle
+                  size="1.5rem"
+                  color="#e84a2c"
+                  style={{ cursor: "pointer" }}
+                />
+              }
+              arrowLeftDisabled={
+                <FiArrowLeft size="1.5rem" style={{ cursor: "pointer" }} />
+              }
+              arrowRight={
+                <FiArrowRightCircle
+                  size="1.5rem"
+                  color="#e84a2c"
+                  style={{ cursor: "pointer" }}
+                />
+              }
+              arrowRightDisabled={
+                <FiArrowRight size="1.5rem" style={{ cursor: "pointer" }} />
+              }
+              addArrowClickHandler
+            >
+              <div className="slider-container">
+                <div className="slider">
+                  <div className="single-slider">
+                    <div className="slider-info">
+                      <h2>
+                        <span>
+                          <FiMessageCircle />
+                        </span>
+                      </h2>
+                      <h3>
+                        We wanted to redesign our website to be trendy and who
+                        better to bring in and he did not disappoint. I love his
+                        work
+                      </h3>
+                      <h4>Jason Doe</h4>
+                      <p>
+                        <i>Head of Human Resource</i>
+                      </p>
+                    </div>
+                    <div
+                      className="slider-image"
+                      style={{ backgroundImage: `url(${ImageTestimoni})` }}
+                    ></div>
+                  </div>
+                </div>
+              </div>
+              <div className="slider-container">
+                <div className="slider">
+                  <div className="single-slider">
+                    <div className="slider-info">
+                      <h2>
+                        <span>
+                          <FiMessageCircle />
+                        </span>
+                      </h2>
+                      <h3>
+                        We wanted to redesign our website to be trendy and who
+                        better to bring in and he did not disappoint. I love his
+                        work
+                      </h3>
+                      <h4>Jason Doe</h4>
+                      <p>
+                        <i>Head of Human Resource</i>
+                      </p>
+                    </div>
+                    <div
+                      className="slider-image"
+                      style={{ backgroundImage: `url(${ImageTestimoni})` }}
+                    ></div>
+                  </div>
+                </div>
+              </div>
+            </Carousel>
           </div>
         </div>
       </section>

@@ -9,7 +9,9 @@ import image8 from "./components/portfolio/8.jpg";
 import image9 from "./components/portfolio/9.jpg";
 import image10 from "./components/portfolio/10.jpg";
 
-const ImageItem = [
+import testimoni1 from "./components/testimoni/webgirl.jpg";
+
+export const ImagePortfolio = [
   { image: image1, status: "code" },
   { image: image2, status: "design" },
   { image: image3, status: "design" },
@@ -22,4 +24,4 @@ const ImageItem = [
   { image: image10, status: "design" },
 ];
 
-export default ImageItem;
+export const ImageTestimoni = testimoni1;

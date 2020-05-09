@@ -322,3 +322,54 @@ nav a.menu {
 .image-viewer {
   z-index: 99;
 }
+
+.testimonials {
+  padding-bottom: 2.5rem;
+  background: var(--darkerBg);
+  color: #fff;
+}
+
+.slider-container {
+  display: flex;
+  justify-content: center;
+}
+
+.slider {
+  /* width: 65%; */
+  margin: 0 2rem;
+}
+
+.single-slider {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  background-image: url("./components/slider-bg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.slider-info {
+  padding: 1.8rem 1.1rem;
+}
+.slider-info h2 {
+  font-size: 2rem;
+  color: var(--bgAccentDark);
+}
+
+.slider-info h3 {
+  font-size: 1.5rem;
+  margin: 1rem 0;
+  line-height: 2.5rem;
+  text-align: justify;
+}
+
+.slider-info h4 {
+  font-size: 1rem;
+  color: var(--bgAccentDark);
+  margin-bottom: 0.3rem;
+}
+
+.slider-image {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
