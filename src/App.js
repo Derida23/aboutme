@@ -319,6 +319,7 @@ function App() {
           </div>
           <div style={{ width: "74%", margin: "auto" }}>
             <Carousel
+              slidesPerPage={1}
               arrowLeft={
                 <FiArrowLeftCircle
                   size="1.5rem"
@@ -341,58 +342,30 @@ function App() {
               }
               addArrowClickHandler
             >
-              <div className="slider-container">
-                <div className="slider">
-                  <div className="single-slider">
-                    <div className="slider-info">
-                      <h2>
-                        <span>
-                          <FiMessageCircle />
-                        </span>
-                      </h2>
-                      <h3>
-                        We wanted to redesign our website to be trendy and who
-                        better to bring in and he did not disappoint. I love his
-                        work
-                      </h3>
-                      <h4>Jason Doe</h4>
-                      <p>
-                        <i>Head of Human Resource</i>
-                      </p>
+              {ImageTestimoni.map((obj, idx) => (
+                <div className="slider-container" key={idx}>
+                  <div className="slider">
+                    <div className="single-slider">
+                      <div className="slider-info">
+                        <h2>
+                          <span>
+                            <FiMessageCircle />
+                          </span>
+                        </h2>
+                        <h3>{obj.comment}</h3>
+                        <h4>{obj.name}</h4>
+                        <p>
+                          <i>{obj.status}</i>
+                        </p>
+                      </div>
+                      <div
+                        className="slider-image"
+                        style={{ backgroundImage: `url(${obj.image})` }}
+                      ></div>
                     </div>
-                    <div
-                      className="slider-image"
-                      style={{ backgroundImage: `url(${ImageTestimoni})` }}
-                    ></div>
                   </div>
                 </div>
-              </div>
-              <div className="slider-container">
-                <div className="slider">
-                  <div className="single-slider">
-                    <div className="slider-info">
-                      <h2>
-                        <span>
-                          <FiMessageCircle />
-                        </span>
-                      </h2>
-                      <h3>
-                        We wanted to redesign our website to be trendy and who
-                        better to bring in and he did not disappoint. I love his
-                        work
-                      </h3>
-                      <h4>Jason Doe</h4>
-                      <p>
-                        <i>Head of Human Resource</i>
-                      </p>
-                    </div>
-                    <div
-                      className="slider-image"
-                      style={{ backgroundImage: `url(${ImageTestimoni})` }}
-                    ></div>
-                  </div>
-                </div>
-              </div>
+              ))}
             </Carousel>
           </div>
         </div>

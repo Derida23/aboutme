@@ -10,6 +10,8 @@ import image9 from "./components/portfolio/9.jpg";
 import image10 from "./components/portfolio/10.jpg";
 
 import testimoni1 from "./components/testimoni/webgirl.jpg";
+import testimoni2 from "./components/testimoni/webdude.jpg";
+import testimoni3 from "./components/testimoni/webguy.jpg";
 
 export const ImagePortfolio = [
   { image: image1, status: "code" },
@@ -24,4 +26,26 @@ export const ImagePortfolio = [
   { image: image10, status: "design" },
 ];
 
-export const ImageTestimoni = testimoni1;
+export const ImageTestimoni = [
+  {
+    image: testimoni1,
+    name: "Jason Doe",
+    status: "Head of Human Resource",
+    comment:
+      "We wanted to redesign our website to be trendy and who better to bring in and he did not disappoint. I love his work.",
+  },
+  {
+    image: testimoni2,
+    name: "Pascal Tremblay",
+    status: "Creative Lead Project",
+    comment:
+      "We look forward to working with him again. He’s definitely the kind of designer you can trust with a project from start to finish.",
+  },
+  {
+    image: testimoni3,
+    name: "Alvin Engler",
+    status: "Sr. Systems Developer",
+    comment:
+      "Confidence to really dig in to tricky design scenarios and the collaborative friction that's needed to produce excellent work.",
+  },
+];
