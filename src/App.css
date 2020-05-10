@@ -373,3 +373,18 @@ nav a.menu {
   background-repeat: no-repeat;
   background-position: center;
 }
+
+.brands {
+  padding: 0 3rem;
+}
+
+.inner-brands {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1rem;
+  margin-top: 5rem;
+}
+
+.inner-brands img {
+  width: 70%;
+}

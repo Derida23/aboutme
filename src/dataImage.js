@@ -13,6 +13,12 @@ import testimoni1 from "./components/testimoni/webgirl.jpg";
 import testimoni2 from "./components/testimoni/webdude.jpg";
 import testimoni3 from "./components/testimoni/webguy.jpg";
 
+import brand1 from "./components/brands/1.png";
+import brand2 from "./components/brands/2.png";
+import brand3 from "./components/brands/3.png";
+import brand4 from "./components/brands/4.png";
+import brand5 from "./components/brands/5.png";
+
 export const ImagePortfolio = [
   { image: image1, status: "code" },
   { image: image2, status: "design" },
@@ -48,4 +54,12 @@ export const ImageTestimoni = [
     comment:
       "Confidence to really dig in to tricky design scenarios and the collaborative friction that's needed to produce excellent work.",
   },
+];
+
+export const ImageBrand = [
+  { image: brand1, alt: "photos-client" },
+  { image: brand2, alt: "photos-client" },
+  { image: brand3, alt: "photos-client" },
+  { image: brand4, alt: "photos-client" },
+  { image: brand5, alt: "photos-client" },
 ];

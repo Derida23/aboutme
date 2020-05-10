@@ -1,4 +1,4 @@
-import React, { useState, useCallback } from "react";
+import React, { useState, useCallback, useEffect } from "react";
 import "./App.css";
 import {
   FiSearch,
@@ -14,7 +14,9 @@ import {
   FiArrowRight,
 } from "react-icons/fi";
 import { TiBrush } from "react-icons/ti";
-import { ImagePortfolio, ImageTestimoni } from "./dataImage";
+import { ImagePortfolio, ImageTestimoni, ImageBrand } from "./dataImage";
+import Loading from "./components/loading/Loading";
+
 import ImageViewer from "react-simple-image-viewer";
 import Carousel from "@brainhubeu/react-carousel";
 import "@brainhubeu/react-carousel/lib/style.css";
@@ -22,6 +24,7 @@ import "@brainhubeu/react-carousel/lib/style.css";
 function App() {
   const [currentImage, setCurrentImage] = useState(0);
   const [isViewerOpen, setIsViewerOpen] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   const openImageViewer = useCallback((index) => {
     setCurrentImage(index);
@@ -93,8 +96,15 @@ function App() {
     document.body.appendChild(css);
   };
 
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(true);
+    }, 2000);
+  }, []);
+
   return (
     <div>
+      {!loading && <Loading />}
       <div className="wrapper">
         <header>
           <div className="container">
@@ -279,6 +289,7 @@ function App() {
         <div className="gallery-box">
           {ImagePortfolio.map((item, index) => (
             <div
+              key={index}
               className="gallery-item"
               onClick={() => openImageViewer(index)}
               style={{
@@ -367,6 +378,13 @@ function App() {
                 </div>
               ))}
             </Carousel>
+          </div>
+        </div>
+        <div className="brands">
+          <div className="inner-brands">
+            {ImageBrand.map((item, index) => (
+              <img src={item.image} alt={item.alt} key={index} />
+            ))}
           </div>
         </div>
       </section>
