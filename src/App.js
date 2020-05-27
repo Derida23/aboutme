@@ -380,11 +380,30 @@ function App() {
             </Carousel>
           </div>
         </div>
-        <div className="brands">
+        {/* <div className="brands">
           <div className="inner-brands">
             {ImageBrand.map((item, index) => (
               <img src={item.image} alt={item.alt} key={index} />
             ))}
+          </div>
+        </div> */}
+      </section>
+
+      <section className="cat-action">
+        <div className="container">
+          <div className="cat-flex">
+            <div className="cat-project">Start a Project</div>
+            <div className="cat-title">
+              <div className="text-center">Interested in working together?</div>
+              <div className="text-center">
+                We should queue up a chat. I’ll buy the coffee.
+              </div>
+            </div>
+            <a href="/#">
+              <div className="cat-button">
+                <div className="cat-button2">Lets do This</div>
+              </div>
+            </a>
           </div>
         </div>
       </section>

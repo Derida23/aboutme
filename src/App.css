@@ -388,3 +388,45 @@ nav a.menu {
 .inner-brands img {
   width: 70%;
 }
+
+.cat-action {
+  color: #fff;
+  margin: 2.5rem 0rem;
+}
+
+.cat-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cat-project {
+  font-size: 2.1rem;
+  font-weight: 600;
+  color: var(--bgAccentDark);
+}
+
+.cat-title {
+  font-size: 1.1rem;
+}
+
+.cat-button {
+  border-color: var(--bgAccentDark);
+  border-style: solid;
+  border-width: 0.1rem;
+  padding: 0.7rem 1.7rem;
+  border-radius: 2rem;
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.cat-button:hover {
+  background-color: var(--bgAccentDark);
+}
+
+.cat-button2 {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #fff;
+}
