@@ -389,6 +389,11 @@ nav a.menu {
   width: 70%;
 }
 
+.core-code {
+  padding-bottom: 2.5rem;
+  color: #fff;
+}
+
 .cat-action {
   color: #fff;
   margin: 2.5rem 0rem;

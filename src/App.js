@@ -139,9 +139,9 @@ function App() {
 
               <ul>
                 <li>
-                  <a href="/#">
+                  {/* <a href="/#">
                     <FiSearch />
-                  </a>
+                  </a> */}
                 </li>
                 <li>
                   <a href="/#" className="menu">
@@ -380,13 +380,18 @@ function App() {
             </Carousel>
           </div>
         </div>
-        {/* <div className="brands">
-          <div className="inner-brands">
-            {ImageBrand.map((item, index) => (
-              <img src={item.image} alt={item.alt} key={index} />
-            ))}
+      </section>
+
+      <section className="core-code">
+        <div className="container">
+          <div className="brands">
+            <div className="inner-brands">
+              {ImageBrand.map((item, index) => (
+                <img src={item.image} alt={item.alt} key={index} />
+              ))}
+            </div>
           </div>
-        </div> */}
+        </div>
       </section>
 
       <section className="cat-action">
